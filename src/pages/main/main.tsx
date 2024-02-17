@@ -1,6 +1,6 @@
 import React from 'react';
 
-const App: React.FC = () => {
+const Main: React.FC = () => {
   const weatherData = {
     temperature: 25,
     description: 'Sunny',
@@ -29,4 +29,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default Main;
