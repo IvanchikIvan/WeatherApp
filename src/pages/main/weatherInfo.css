@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.weather-section {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.section-title {
+  color: whitesmoke;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.weather-info {
+  margin-top: 10px;
+}
+
+.weather-info p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.weather-info p:nth-child(2) {
+  color: #ff9800;
+}
+
+.weather-info p:nth-child(4) {
+  color: #2196f3;
+}
