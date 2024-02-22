@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.header {
+    font-family: "Space Mono", monospace;
+    color: whitesmoke;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: calc(15px + 5 * (100vw / 1280));
+}

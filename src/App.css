@@ -1,0 +1,14 @@
+.weather-app {
+    background: url('./assets/bg.jpeg');
+    background-size: cover;
+    height: 100vh;
+}
+
+.weather-app__container { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: max-content;
+    margin: 0 auto;
+    height: 100%;
+}
