@@ -1,32 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-.container {
+.weather-info__container {
   display: flex;
   height: 100vh;
   font-family: "Space Mono", monospace;
   color: whitesmoke;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content:  space-evenly;
+  width: 100%;
+  padding: 30px;
 }
 
-.weather-section {
-  margin: 20px;
-  padding: 20px;
+.weather-info__content {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.section-title {
-  color: whitesmoke;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.weather-info {
-  margin-top: 10px;
-}
-
-.weather-info p {
-  font-size: 18px;
-  margin: 5px 0;
+  gap:20px;
+  font-size: calc(15px + 10 * (100vw / 1280));
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.39);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.4px);
+  -webkit-backdrop-filter: blur(7.4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 

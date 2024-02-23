@@ -1,5 +1,7 @@
 import React from 'react';
 import './weatherInfo.css';
+import sun from '../../assets/sun-svgrepo-com.svg'
+import moon from '../../assets/moon-svgrepo-com.svg'
 
 const WeatherInfo: React.FC = () => {
   const weatherData = {
@@ -10,8 +12,8 @@ const WeatherInfo: React.FC = () => {
   };
 
   return (
-    <div className="container">
-        <div className="weather-info">
+    <div className="weather-info__container">
+        <div className="weather-info__content">
           <p>Temperature: {weatherData.temperature}°C</p>
           <p>Description: {weatherData.description}</p>
           <p>Humidity: {weatherData.humidity}%</p>
