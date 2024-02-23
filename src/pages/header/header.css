@@ -6,5 +6,5 @@
     text-align: center;
     margin: 0 auto;
     padding: 10px 0;
-    font-size: calc(15px + 5 * (100vw / 1280));
+    font-size: calc(15px + 25 * (100vw / 1280));
 }
