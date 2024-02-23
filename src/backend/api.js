@@ -1,7 +1,9 @@
 import express from 'express';
 import fetch from 'node-fetch';
+import cors from 'cors';
 
 const app = express();
+app.use(cors());
 const PORT = 3000;
 
 const url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=55.991893%2C37.214390';
