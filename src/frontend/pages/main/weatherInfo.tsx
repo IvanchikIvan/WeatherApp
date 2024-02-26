@@ -1,24 +1,22 @@
-import React from 'react';
-import './weatherInfo.css';
-import sun from '../../assets/sun-svgrepo-com.svg'
-import moon from '../../assets/moon-svgrepo-com.svg'
+import React from "react";
+import "./weatherInfo.css";
+import { WeatherData } from "../../types/types";
 
-const WeatherInfo: React.FC = () => {
-  const weatherData = {
-    temperature: 25,
-    description: 'Sunny',
-    humidity: 60,
-    windSpeed: 10,
-  };
+interface WeatherInfoProps {
+  weatherInfo: WeatherData | null;
+}
+
+const WeatherInfo: React.FC<WeatherInfoProps> = ({ weatherInfo }) => {
+  console.log(weatherInfo);
 
   return (
     <div className="weather-info__container">
-        <div className="weather-info__content">
-          <p>Temperature: {weatherData.temperature}°C</p>
-          <p>Description: {weatherData.description}</p>
-          <p>Humidity: {weatherData.humidity}%</p>
-          <p>Wind Speed: {weatherData.windSpeed} km/h</p>
-        </div>
+      <div className="weather-info__content">
+        <p>Temperature: {weatherInfo?.current.temp_c}°C</p>
+        <p>Description: {weatherInfo?.current.condition.text}</p>
+        <p>Humidity: {weatherInfo?.current.humidity}%</p>
+        <p>Wind: {weatherInfo?.current.wind_mph} m/h {weatherInfo?.current.wind_dir}</p>
+      </div>
     </div>
   );
 };
