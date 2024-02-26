@@ -12,10 +12,16 @@ const WeatherInfo: React.FC<WeatherInfoProps> = ({ weatherInfo }) => {
   return (
     <div className="weather-info__container">
       <div className="weather-info__content">
-        <p>Temperature: {weatherInfo?.current.temp_c}°C</p>
+        <div className="temp">
+          <p className="fact-temp">Temperature: {weatherInfo?.current.temp_c}°C</p>
+          <p className="feelslike-temp">Feels like: {weatherInfo?.current.feelslike_c}°C</p>
+        </div>
         <p>Description: {weatherInfo?.current.condition.text}</p>
         <p>Humidity: {weatherInfo?.current.humidity}%</p>
-        <p>Wind: {weatherInfo?.current.wind_mph} m/h {weatherInfo?.current.wind_dir}</p>
+        <p>
+          Wind: {weatherInfo?.current.wind_mph} m/h{" "}
+          {weatherInfo?.current.wind_dir}
+        </p>
       </div>
     </div>
   );
