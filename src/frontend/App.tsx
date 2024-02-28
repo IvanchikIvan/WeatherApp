@@ -32,13 +32,6 @@ const App: React.FC = () => {
       <div className="weather-app__container">
         <Header />
         <WeatherInfo weatherInfo={data}/> 
-        <button
-          onClick={() => {
-            fetchData();
-          }}
-        >
-          click
-        </button>
       </div>
     </div>
   );
