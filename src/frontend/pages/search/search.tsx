@@ -14,7 +14,7 @@ const SearchBar: React.FC = () => {
   };
 
   return (
-    <form className="search-container" onSubmit={handleSubmit}>
+    <form className="search-form" onSubmit={handleSubmit}>
       <input
         className="search-input"
         type="text"

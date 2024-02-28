@@ -1,19 +1,22 @@
 .search-form {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .search-input {
+  width: 100%;
   padding: 8px;
   border: 2px solid #ccc;
   background: whitesmoke;
   color: #2e2e2e;
   border-radius: 16px;
-  margin-right: 8px;
   font-size: 16px;
 }
 
 .search-button {
+  width: 100%;
   padding: 8px 16px;
   background-color: #007bff;
   color: white;
