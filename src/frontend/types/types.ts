@@ -45,3 +45,9 @@ export interface WeatherData {
   location: Location;
   current: CurrentWeather;
 }
+
+export interface QueryType {
+  isLoading: boolean;
+  error: string | null;
+  data: WeatherData | undefined;
+}
