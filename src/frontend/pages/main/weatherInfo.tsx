@@ -1,32 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./weatherInfo.css";
-import { WeatherData } from "../../types/types";
+import { QueryType } from '../../types/types';
 import SearchBar from "../search/search";
+import { useQuery } from "react-query";
 
-interface WeatherInfoProps {
-  weatherInfo: WeatherData | null;
-}
 
-const WeatherInfo: React.FC<WeatherInfoProps> = ({ weatherInfo }) => {
-  console.log(weatherInfo);
+const data: React.FC = () => {
 
+  const { isLoading, error, data }: QueryType = useQuery('weather');
+
+  useEffect(() => {
+    console.log('isLoading:', isLoading);
+    console.log('error:', error);
+  }, [isLoading, error]);
+  
   return (
     <div className="weather-info">
       <div className="weather-info__container">
         <div className="weather-info__content">
           <div className="temp">
             <p className="fact-temp">
-              Temperature: {weatherInfo?.current.temp_c}°C
+              Temperature: {data?.current.temp_c}°C
             </p>
             <p className="feelslike-temp">
-              Feels like: {weatherInfo?.current.feelslike_c}°C
+              Feels like: {data?.current.feelslike_c}°C
             </p>
           </div>
-          <p>Description: {weatherInfo?.current.condition.text}</p>
-          <p>Humidity: {weatherInfo?.current.humidity}%</p>
+          <p>Description: {data?.current.condition.text}</p>
+          <p>Humidity: {data?.current.humidity}%</p>
           <p>
-            Wind: {weatherInfo?.current.wind_mph} m/h{" "}
-            {weatherInfo?.current.wind_dir}
+            Wind: {data?.current.wind_mph} m/h{" "}
+            {data?.current.wind_dir}
           </p>
         </div>
         <SearchBar />
@@ -35,4 +39,4 @@ const WeatherInfo: React.FC<WeatherInfoProps> = ({ weatherInfo }) => {
   );
 };
 
-export default WeatherInfo;
+export default data;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './search.css';
-
+import { useQuery } from 'react-query';
 
 const fetchWeather = async () => {
   try {
@@ -16,6 +16,8 @@ const fetchWeather = async () => {
 };
 
 const SearchBar: React.FC = () => {
+
+  const { isLoading, error, data } = useQuery('weather', fetchWeather);
 
   return (
     <form className="search-form">
