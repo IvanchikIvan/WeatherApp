@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 const PORT = 3000;
 
-const url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=Zelenograd';
+const url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=Moscow';
 const options = {
 	method: 'GET',
 	headers: {
