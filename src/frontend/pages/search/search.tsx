@@ -30,7 +30,7 @@ const SearchBar: React.FC = () => {
         className="search-input"
         type="text"
         placeholder="Search..."
-        value={Location}
+        value={Location} 
         onChange={(e) => setLocation(e.target.value)}
       />
       <button className="search-button" type="submit">
