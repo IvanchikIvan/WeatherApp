@@ -11,8 +11,12 @@ const weatherApiKey = '86da46860bmsh0b86b30185f6acbp19faabjsn1ee73a058bc4';
 
 app.get('/api/weather-info', async (req, res) => {
     try {
+        const { location } = req.query;
+        if (!location) {
+            throw new Error('Location parameter is missing');
+        }
         
-        const url = `https://${weatherApiHost}/current.json?q=Moscow`;
+        const url = `https://${weatherApiHost}/current.json?q=${location}`;
         const options = {
             method: 'GET',
             headers: {
